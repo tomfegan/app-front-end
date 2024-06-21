@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+                name="album"
+                type="com.example.recordshopfrontend.model.AlbumModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+                android:id="@+id/artist"
+                android:textSize="32sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{album.artist}"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="50dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="75dp"/>
+
+        <TextView
+                android:id="@+id/albumName"
+                android:textSize="32sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{album.albumName}"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/artist"/>
+
+        <TextView
+                android:id="@+id/copiesInStock"
+                android:textSize="32sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{album.copiesInStock}"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/albumName"/>
+        <TextView
+                android:id="@+id/genre"
+                android:textSize="32sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{album.genre}"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/copiesInStock"/>
+        <TextView
+                android:id="@+id/releaseYear"
+                android:textSize="32sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{album.releaseYear}"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/genre"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

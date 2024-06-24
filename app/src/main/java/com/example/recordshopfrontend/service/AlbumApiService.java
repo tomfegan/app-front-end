@@ -2,7 +2,7 @@ package com.example.recordshopfrontend.service;
 
 import com.example.recordshopfrontend.model.AlbumModel;
 import retrofit2.Call;
-import retrofit2.http.GET;
+import retrofit2.http.*;
 
 import java.util.List;
 
